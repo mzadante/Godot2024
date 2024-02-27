@@ -2,11 +2,11 @@ extends Node
 # continuacion del tutorial
 func _ready():
 	"""
-	Para entender los Arrays y sus funciones ya establecidas en gd script,
-	vamos a ejemplificar que tenemos un inventario o un bolso en nuestro juego
-	al cual le vamos a ir agregando objetos, aqui veremos como añadir o quitar
-	dichos objetos ademas de recorerlos y aplicar lo visto anteriormente como
-	bucles y condicionales.
+	Para entender los Arrays y sus funciones más utilizadas establecidas en
+	gd script, vamos a ejemplificar que tenemos un inventario o un bolso en 
+	nuestro juego al cual le vamos a ir agregando objetos, aqui veremos como
+	añadir o quitar dichos objetos ademas de recorerlos y aplicar lo visto 
+	anteriormente como bucles y condicionales.
 	Trabajar con array es como ir encadenando objetos y es muy util si 
 	necesitas muchos objetos o si no sabes cuantos vas a necesitar, va el
 	ejemplo para aprender las diferentes funciones para utilizar en los arrays.
@@ -76,5 +76,40 @@ func _ready():
 	cofre.sort()
 	print(cofre) #veremos los objetos ordenados alfabeticamente
 	
+	# Si quisieramos ordenarlos de forma aleatoria podriamos utilizar la función
+	# shuffle() este ordenara el array de objetos de nuestro cofre en forma aleatorio
+	cofre.shuffle()
+	print(cofre) # ordenara de diferentes formas aleatorias cada vez que se ejecute
+	
+	# Como ya obtuvimos todos los ojetos del cofre en nuestro bolso, deberiamos
+	# utilizar la función clear() esta eliminara todos los objetos del cofre,
+	# de esta forma nos aseguramos que el cofre quedo vacio.
+	cofre.clear()
+	print(cofre) # ya no quedo nada en nuestro array cofre mostrandonos [] el array vacio.
+	"""
+	Ejemplo de como podriamos utilizarlo en un juego real:
+		Imaginemos que nuestro personaje del juego se encuentra un cofre y al 
+		abrirlo solo puede obtener un solo objeto de forma aleatorio nuestro
+		escript seria algo así: 
+	"""	
+	# Añadimos objetos al cofre porque anteriormente los habiamos eliminado
+	cofre = ["anillo", "capa", "armadura", "daga"]
+	# observamos el contenido del cofre
+	print(cofre)
+	# El jugador tiene su inventario (bolso) vacio
+	var inventario = []
+	# El contenido de nuestro cofre tiene ya sus objetos y los ordenamos en forma aleatoria
+	cofre.shuffle()
+	# Ahora agregamos un objeto del cofre que ya esta desordenado en nuestro
+	# inventario (bolso) 
+	inventario.append(cofre[0]) 
+	# Luego deberiamos borrar todo lo que contiene nuestro cofre para que el jugador
+	# no saque otro objeto 
+	cofre.clear()
+	# Ahora podemos ver el contenido de nuestro inventario para ver que objeto 
+	# obtuvimos de forma aleatoria
+	print(inventario)
+	# Y ahora mos traremos que el contenido de nuestro cofre quedo vacio
+	print(cofre)
 	
 
