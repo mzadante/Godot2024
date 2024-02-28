@@ -112,4 +112,57 @@ func _ready():
 	# Y ahora mos traremos que el contenido de nuestro cofre quedo vacio
 	print(cofre)
 	
-
+	"""
+	Con este script basico los objetos tienen poca información es muy basico, 
+	pero puede servir, pero supongamos que queremos coleccionar muchos objetos
+	del juego como materiales, esa estructura no nos servira por ser tan basica
+	para ello tendremos que utilizar otras estructuras mas complejas, como por
+	ejemplo los diccionarios.
+	"""
+	"""
+	DICCIONARIOS: {}  
+	Los diccionarios a diferencias de las listas utilizan dos datos, llave y valor
+	son mas rapido de acceder y contienen mas información de los objetos y de esta
+	forma tenemos la información más organizada, y si quisieramos obtener un valor
+	mas rapido por alli no es necesario recorrerlas con un bucle, aunque si queremos
+	tambien podemos recorrerlos. 
+	"""
+	var otro_bolso = {piedra = 15, madera = 440}
+	print(otro_bolso)
+	# para acceder al valor de un objeto lo podemos hacer utilizando su llave
+	print(otro_bolso["piedra"]) # obtendremos la cantidad de piedras
+	# otra forma de acceder al valor es utilizando punto.
+	print(otro_bolso.madera) # obtendremos la cantidad de madera
+	
+	# Podremos agregar al diccionario mas cosas de esta forma:
+	otro_bolso.oro = 500
+	otro_bolso.plata = 300
+	print(otro_bolso) # mostrara los dos objetos nuevos con su clave y valor
+	# Podriamos tambien aumentar el valor de algun objeto de esta forma:
+	otro_bolso.oro += 1
+	print(otro_bolso.oro) # veremos que se añadio 1 mas de oro
+	
+	# También se puede eliminar algun objeto del diccionario a traves de la 
+	# función por defecto de gdscript erase() colocando la llave del objeto a 
+	# eliminar.
+	otro_bolso.erase("piedra")
+	print(otro_bolso) # veremos que piedra desaparecio fue borrada
+	# Recorreremos un diccionario para ver sus claves y alli podriamos utilizar
+	# el metodo keys()
+	for clave in otro_bolso.keys():
+		#print("Clave : ", clave) # veremos la clave 
+		#print("Valor: ", otro_bolso[clave]) # veremos el valor
+		print("Clave: ", clave, "  Valor: ", otro_bolso[clave]) #clave y valor
+		
+	""" 
+	CONTINUA EN EL TUTORIAL 03 
+	"""
+	
+	
+	
+	
+	
+	
+	
+	
+	
