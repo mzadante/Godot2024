@@ -22,7 +22,11 @@ FUNCIONES:
 	estas necesitan una identación (tab) para que no provoquen errores, 
 	las funciones pueden estar al mismo nivel que la función ready_(), es decir
 	no necesitan estar identadas. 
-	Las funciones ademas pueden recibir parámetros
+	Las funciones ademas pueden recibir parámetros y devolver resultados ya sea 
+	imprimiendo lo que hace la función o utilizando return.
+	Lo mas importante para las buenas practicas, es que cuando creemos funciones
+	las hagamos lo mas pequeñas y concretas posibles, de esta forma el codigo
+	sera mas facil de entender y arreglar. 
 """
 func ejemplo():
 	print("las funciones se deben ejecutar por debajo de la función _ready()")
@@ -47,7 +51,8 @@ func por_defecto(nombre, valor = 0):
 """
 Las funciones no solo imprimen el resultado tambien pueden retornar el resultado
 con el uso de la palabra reservada return, otra cosa a tener en cuenta que todo
-el codigo que pusieramos debajo de return no se ejecutará.  
+el codigo que pusieramos debajo de return no se ejecutará y si dentro de return 
+no colocaramos nada, la funcion se ejecutaria pero no devolveria nada (null) 
 """	
 func ver_return(nombre):
 	return nombre 
