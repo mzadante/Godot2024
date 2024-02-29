@@ -11,6 +11,10 @@ func _ready():
 	# defecto esta alli, pero si lo modificamos en la llamada de la función,
 	# reemplazara el valor por defecto
 	por_defecto("Carlos", 144) # mostrara el valor ingresado y reemplazara el por defecto
+	
+	# devolviendo el resultado con return
+	var mensaje = ver_return("Nicolás")	
+	print(mensaje) # devolvera Nicolas que es el valor ahora de la variable mensaje
 """  
 FUNCIONES:
 	Todas las funciones se deben ejecutar por debajo de la función _ready() 
@@ -39,4 +43,13 @@ func game_over(nombre, puntos):
 ## Parametros por defecto tambien puede ser pasados en las funciones
 func por_defecto(nombre, valor = 0):
 	print(nombre, " y ", "valor por defecto: ", valor)
+	
+"""
+Las funciones no solo imprimen el resultado tambien pueden retornar el resultado
+con el uso de la palabra reservada return, otra cosa a tener en cuenta que todo
+el codigo que pusieramos debajo de return no se ejecutará.  
+"""	
+func ver_return(nombre):
+	return nombre 
+
 	
