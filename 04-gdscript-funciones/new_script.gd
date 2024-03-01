@@ -15,6 +15,9 @@ func _ready():
 	# devolviendo el resultado con return
 	var mensaje = ver_return("Nicolás")	
 	print(mensaje) # devolvera Nicolas que es el valor ahora de la variable mensaje
+	
+	# Ejemplo de funciones con funciones en su interior y parseo de valores
+	ejemplo_nuevo("Julian")
 """  
 FUNCIONES:
 	Todas las funciones se deben ejecutar por debajo de la función _ready() 
@@ -57,4 +60,42 @@ no colocaramos nada, la funcion se ejecutaria pero no devolveria nada (null)
 func ver_return(nombre):
 	return nombre 
 
+"""
+También se pueden llamara funciones dentro de las funciones, como las funciones
+que vienen por defecto por gdscript como las que nosotros creemos.
+en la funcion de abajo la de ejemplo nuevo veremos que recibe un numero entero
+(int) esa funcion al llamarla nos largara un error, para ello podemos utilizar
+la funcion str la cual convertira al int en un string.  
+"""
+## esta funcion mostrara error por el tipo de dato 	
+#func ejemplo_nuevo(nombre, numero = 33):
+	#var nombre_nuevo = "Tiene: " + nombre + "."
+	#var edad = "\rla edad de: " + numero
+	#return nombre_nuevo + edad
+## La misma funcion solucionada con str() convirtiendo el numero a texto	
+func ejemplo_nuevo(nombre, numero = 33):
+	var nombre_nuevo = "Tiene: " + nombre + "."
+	var edad = "\rla edad de: " + str(numero)
+	return nombre_nuevo + edad	
+
+"""
+Por ejemplo si tuvieramos que agregar un sonido a nuestro juego dentro de una
+una función de ejemplo como mostrar_mensaje, esta arrojaria error porque antes
+deberiamos declarar la función reproducir_sonido  
+"""
+#func mostrar_mensaje():
+	#reproducir_sonido()
+	
+func mostrar_mensaje():
+	reproducir_sonido()	
+
+## para evitar dicho error deberiamos declarar la función y si no sabemos cual
+## va a ser el contenido de la misma podriamos utilizar pass, que esto nos 
+## permite declarar la funcion sin colocarle el contenido y esto solucionaria
+## el error, ya que una funcion en gdscript no puede estar vacia.
+
+func reproducir_sonido():
+	pass # esto soluciona el error 
+	
+	
 	
