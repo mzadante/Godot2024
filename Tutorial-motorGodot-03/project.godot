@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="Tutorial-motorGodot-03"
+run/main_scene="res://Escenes/World.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GLOBAL="*res://Scripts/GLOBAL.gd"
