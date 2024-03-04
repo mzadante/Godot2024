@@ -67,7 +67,7 @@ shape = SubResource("ConvexPolygonShape3D_ej8v2")
 transform = Transform3D(1, 0, 0, 0, 0.989402, 0.145202, 0, -0.145202, 0.989402, 0, 1.77177, 0)
 
 [node name="cubo" type="MeshInstance3D" parent="cubo2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 1.49012e-08, 0, -1.49012e-08, 1, 0, 4, -5.96046e-08)
 material_override = ExtResource("1_knfv7")
 mesh = SubResource("BoxMesh_2snt5")
 skeleton = NodePath("../..")
